@@ -8,7 +8,7 @@ console.log("API Key:", API_KEY);
 console.log("API URL:", API_URL);
 console.log("APII URL:", APII_URL);
 
-export async function fetchaCakes() {
+export async function fetchCakes() {
   if (!API_KEY) {
     console.error("API Key is missing!");
     return [];

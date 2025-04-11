@@ -1,14 +1,15 @@
-import { ColourfulTextDemo } from './ColourfullText'
-import Button from './Button'
-import { FaLocationArrow } from 'react-icons/fa6'
-import Image from 'next/image'
+import { ColourfulTextDemo } from "./ColourfullText";
+import Button from "./Button";
+import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 const HeroPage = () => {
   return (
-    <div className='bg-Pale h-screen w-full flex flex-row items-center'>
+    <div className="bg-Pale h-screen w-full flex flex-row items-center">
       {/* Left Side - Image */}
       <div className="flex-start">
-        <Image 
+        <Image
           src="/deva-williamson-pZZJwwNPy2k-unsplash.jpg"
           alt="Hero Image"
           width={380}
@@ -20,9 +21,14 @@ const HeroPage = () => {
       {/* Right Side - Text and Button */}
       <div className="flex flex-col items-center">
         <ColourfulTextDemo />
-        <a href="#CakesPage">
-          <Button title="Explore Cakes" icon={<FaLocationArrow />} position="right" className="mt-4" />
-        </a>
+        <Link href="/CakesPage">
+          <Button
+            title="Explore Cakes"
+            icon={<FaLocationArrow />}
+            position="right"
+            className="mt-4"
+          />
+        </Link>
       </div>
     </div>
   );
